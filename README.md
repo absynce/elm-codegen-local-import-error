@@ -1,4 +1,4 @@
-# SSCCE for elm-codegen local install bug.
+# SSCCE for elm-codegen local install file bug.
 
 Expected behavior:
 
