@@ -1,23 +1,22 @@
 # SSCCE for elm-codegen local install file bug.
 
-Expected behavior:
+## Expected behavior
 
 `elm-codegen install codegen/helpers/LocalFile.elm` creates helper. Then it runs with `elm-codegen run`.
 
-Actual behavior:
+## Actual behavior
 
 `elm-codegen install codegen/helpers/LocalFile.elm` creates helper. Then it _errors_ with `elm-codegen run`.
 
-To reproduce:
+## To reproduce inside SSCCE project
 
-    elm-codegen install
     elm-codegen run
 
-Error:
+## Error
 
     Error: ENOENT: no such file or directory, open 'generated/codegen/helpers/LocalFile.elm'
 
-Full stacktrace:
+### Full stacktrace
 
 ```
 node:fs:585
@@ -42,7 +41,7 @@ Error: ENOENT: no such file or directory, open 'generated/codegen/helpers/LocalF
 }
 ```
 
-System info:
+## System info:
 
     node -v
     v16.14.0
