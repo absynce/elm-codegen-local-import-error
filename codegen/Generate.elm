@@ -1,4 +1,3 @@
-
 module Generate exposing (main)
 
 {-| -}
@@ -14,7 +13,6 @@ main =
     Generate.run
         [ file
         ]
-
 
 
 file : Elm.File

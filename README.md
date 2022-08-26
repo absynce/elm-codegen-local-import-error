@@ -2,11 +2,11 @@
 
 Expected behavior:
 
-`elm-codegen install src/Icon.elm` creates helpers. Then it runs with `elm-codegen run`.
+`elm-codegen install codegen/helpers/LocalFile.elm` creates helper. Then it runs with `elm-codegen run`.
 
 Actual behavior:
 
-`elm-codegen install src/Icon.elm` creates helpers. Then it _errors_ with `elm-codegen run`.
+`elm-codegen install codegen/helpers/LocalFile.elm` creates helper. Then it _errors_ with `elm-codegen run`.
 
 To reproduce:
 
@@ -15,7 +15,7 @@ To reproduce:
 
 Error:
 
-    Error: ENOENT: no such file or directory, open 'generated/src/Icon.elm'
+    Error: ENOENT: no such file or directory, open 'generated/codegen/helpers/LocalFile.elm'
 
 Full stacktrace:
 
@@ -24,7 +24,7 @@ node:fs:585
   handleErrorFromBinding(ctx);
   ^
 
-Error: ENOENT: no such file or directory, open 'generated/src/Icon.elm'
+Error: ENOENT: no such file or directory, open 'generated/codegen/helpers/LocalFile.elm'
     at Object.openSync (node:fs:585:3)
     at Object.writeFileSync (node:fs:2155:35)
     at _loop_1 (/Users/absynce/.npm/_npx/be14e040090c2b5c/node_modules/elm-codegen/dist/run.js:521:16)
@@ -38,7 +38,7 @@ Error: ENOENT: no such file or directory, open 'generated/src/Icon.elm'
   errno: -2,
   syscall: 'open',
   code: 'ENOENT',
-  path: 'generated/src/Icon.elm'
+  path: 'generated/codegen/helpers/LocalFile.elm'
 }
 ```
 
